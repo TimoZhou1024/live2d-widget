@@ -25,7 +25,7 @@ function loadExternalResource(url, type) {
 }
 
 // 加载 waifu.css live2d.min.js waifu-tips.js
-if (screen.width >= 768) {
+if (screen.width >= 1) {
 	Promise.all([
 		loadExternalResource(live2d_path + "waifu.css", "css"),
 		loadExternalResource(live2d_path + "live2d.min.js", "js"),
@@ -35,8 +35,8 @@ if (screen.width >= 768) {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
 			//apiPath: "https://live2d.fghrsh.net/api/",
-			apiPath: "https://www.timozhou.top:10013/live2d/",
-			//apiPath: "https://api.zsq.im/live2d",
+			//apiPath: "https://www.timozhou.top:10013/live2d/",
+			apiPath: "https://api.zsq.im/live2d",
 			//cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
 			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
 		});
